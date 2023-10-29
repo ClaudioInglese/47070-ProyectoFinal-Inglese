@@ -1,0 +1,128 @@
+*{
+    margin: 0;	
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header .navbar {
+    width: 100%;
+    height:80px;
+}
+
+header .navbar .container-fluid img{
+    width: 200px;
+    height: 60px;
+}
+
+header .navbar .container-fluid form .fa-solid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-top: 10px;
+    cursor: pointer           
+}
+
+header .navbar .container-fluid form span {
+    
+    font-size: 13px;
+    color: yellowgreen;   
+    padding-left: 5px;          
+}
+
+
+main {
+    padding: 20px;
+}
+
+.articulos {
+    display: flex;    
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.articulos .articulo {
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: center;    
+}
+
+.articulos .articulo img {
+    width: 100%;    
+}
+
+.articulos .articulo h2{
+    font-size: 20px;
+}
+
+.articulos .articulo p{
+    font-weight: bold;
+}
+
+
+
+.articulos .articulo input {
+    text-align: center;
+    width: 30px;    
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.articulos .articulo .button {    
+    background-color: #4CAF50;
+    color: white;
+    font-size: 13px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.articulos .articulo button:hover {
+    background-color: #45a049;
+}
+
+
+
+header .navbar .lista-carrito {    
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+header .navbar .lista-carrito ul .submenu {
+    list-style: none;
+}
+
+
+header .navbar .lista-carrito ul .submenu div .tabla thead tr th{
+    width: 250px;   
+    text-align: center; 
+    
+}
+
+header .navbar .lista-carrito ul .submenu div .tabla tbody {
+    text-align: center;
+}
+
+header .navbar .lista-carrito ul .submenu div .btn{
+   display: flex;
+   justify-content: center;
+   margin-top: 50px;
+}
+
+
+

@@ -1,0 +1,87 @@
+[
+    {
+     
+        "id": 1,
+        "imagenURL": "producto1.jpg",
+        "nombre": "Monitor Asus VP228HE 21.5' 75hz ", 
+        "precio": 93000
+    },
+
+    {    
+        "id": 2,
+        "imagenURL": "producto2.jpg",
+        "nombre": "MSI Rtx3090 Ventus 3X OC", 
+        "precio": 850000
+    },
+
+    {    
+        "id": 3,
+        "imagenURL": "producto3.jpg",
+        "nombre": "Fuente Be Quiet 1000W Gold", 
+        "precio": 115000
+    },
+
+    {    
+        "id": 4,
+        "imagenURL": "producto4.jpg",
+        "nombre": "Notebook Asus TUF FX506L FHD 15.6'", 
+        "precio": 680000
+    },
+
+    {    
+        "id": 5,
+        "imagenURL": "producto5.jpg",
+        "nombre": "Gabinete Lian Li O11 Dynamic XL", 
+        "precio": 220000
+    },
+
+    {    
+        "id": 6,
+        "imagenURL": "producto6.jpg",
+        "nombre": "Auriculares HyperX Cloud Flight Black", 
+        "precio": 85000
+    },
+
+    {    
+        "id": 7,
+        "imagenURL": "producto7.jpg",
+        "nombre": "Kingston DDR4 8GB 3200MHz Fury Beast", 
+        "precio": 60000
+    },
+
+    {    
+        "id": 8,
+        "imagenURL": "producto8.jpg",
+        "nombre": "Cooler CPU ID-Cooling ZOOMFLOW XT 240", 
+        "precio": 65000
+    },
+
+    {    
+        "id": 9,
+        "imagenURL": "producto9.jpg",
+        "nombre": "Mother ASUS ROG Z790-E GAMING WIFI", 
+        "precio": 500000
+    },
+
+    {    
+        "id": 10,
+        "imagenURL": "producto10.jpg",
+        "nombre": "AMD Ryzen™ 9 7900X 5.6GHz AM5", 
+        "precio": 560000
+    },
+
+    {    
+        "id": 11,
+        "imagenURL": "producto11.jpg",
+        "nombre": "Joystick PS5 Sony Dualsense Gray Camo", 
+        "precio": 80000
+    },
+
+    {    
+        "id": 12,
+        "imagenURL": "producto12.jpg",
+        "nombre": "Disco M.2 WD 500GB Black SN850 Gen4", 
+        "precio": 105000
+    }
+    
+]

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="./css/styles.css">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <header>       
+        <nav class="navbar bg-dark">
+            <div class="container-fluid xxl-12 xl-12 lg-12 md-12 xs-12"> 
+                <img src="./img/powehard_logo.jpg" alt="">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Search</button>    
+                    <a href="#"><i class="fa-solid fa-cart-shopping" id="carrito-icono" style="color: #ffffff;"></i></a>
+                    <span id="numero-articulos-carrito"></span>
+                </form>
+                
+                <script src="https://kit.fontawesome.com/64e4b13b04.js" crossorigin="anonymous"></script>  
+            </div>         
+            
+            <div id="carrito-lista" class="lista-carrito">
+                <ul>
+                    <li class="submenu">                           
+                        <div id="carrito">                            
+                            <table id="lista-carrito" class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ImagenURL</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn btn-success">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>                                      
+            </div>            
+        </nav>                                                 
+    </header>
+    
+    <main>       
+        <section id="lista-productos" class="articulos">
+            <div class="articulo">
+                
+            </div>
+            
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
