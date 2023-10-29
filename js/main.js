@@ -9,7 +9,7 @@ document.getElementById('carrito-icono').addEventListener('click', function() {
 Swal.fire({
     title: 'Atención!',
     text: 'Comprando esta semana participas del sorteo de unos parlantes Logitech Z607!',
-    imageUrl: '/img/sorteo.jpg',
+    imageUrl: './img/sorteo.jpg',
     imageWidth: 300,
     imageHeight: 300,
     imageAlt: 'Custom image',
