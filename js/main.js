@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <table id="lista-carrito" class="tabla">
                             <thead>
                                 <tr>
-                                    <th>Imagen</th>
+                                    <th></th>
                                     <th>Nombre</th>
                                     <th>Precio</th>
                                     <th>Cantidad</th>
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <tr>
                                     <td><img src="${item.image}" width="100" /></td>
                                     <td>${item.name}</td>
-                                    <td>${item.price}</td>
+                                    <td>$${item.price}</td>
                                     <td>${item.quantity}</td>
                                     <td><a href="#" class="btn btn-danger btn-sm remove-item" data-id="${item.id}">Eliminar</a></td>                                
                                 </tr>
@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const totalPriceElement = document.createElement("p");
             totalPriceElement.innerHTML = `Total: $${total}`;
+            totalPriceElement.style.cssText = "font-size: 18px; font-weight: bolder; text-align: center; margin-top: 40px";
             cartItems.appendChild(totalPriceElement);
 
             const removeButtons = document.querySelectorAll(".remove-item");
@@ -163,4 +164,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     vaciarCarritoBtn.addEventListener("click", () => CarritoDeCompras.vaciarCarrito());
+
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+    darkModeToggle.addEventListener("click", () => {        
+        document.body.classList.toggle("dark-mode");        
+    });
+
 });

@@ -7,6 +7,7 @@
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="./css/styles.css">  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"> 
     <script src="./js/main.js" defer></script>
 </head>
 
@@ -14,14 +15,20 @@
     <header>       
         <nav class="navbar bg-dark">
             <div class="container-fluid xxl-12 xl-12 lg-12 md-12 xs-12"> 
-                <img src="./img/powehard_logo.jpg" alt="">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="" aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit">Search</button>    
-                    <a href="#"><i class="fa-solid fa-cart-shopping" id="carrito-icono" style="color: #ffffff;"></i></a>
-                    <span id="numero-articulos-carrito"></span>
-                </form>
+                <img src="./img/powehard_logo.jpg" alt="">             
+                <button id="dark-mode-toggle" class="boton-dm">Cambiar Modo</button>   
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bars"></i></i></button>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" type="button">Action</button></li>
+                      <li><button class="dropdown-item" type="button">Another action</button></li>
+                      <li><button class="dropdown-item" type="button">Something else here</button></li>
+                    </ul>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping" id="carrito-icono" style="color: #ffffff;"></i></a>
                 
+
+                               
                 <script src="https://kit.fontawesome.com/64e4b13b04.js" crossorigin="anonymous"></script>  
             </div>         
             
@@ -32,7 +39,7 @@
                             <table id="lista-carrito" class="tabla">
                                 <thead>
                                     <tr>
-                                        <th>ImagenURL</th>
+                                        <th></th>
                                         <th>Nombre</th>
                                         <th>Precio</th>
                                         <th>Cantidad</th>
@@ -59,6 +66,7 @@
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>

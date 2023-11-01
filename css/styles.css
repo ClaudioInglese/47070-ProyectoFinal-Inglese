@@ -4,94 +4,40 @@
     box-sizing: border-box;
 }
 
-header .navbar {
-    width: 100%;
-    height:80px;
+body{
+    background-color: white;
+    color: black;
 }
 
-header .navbar .container-fluid img{
+body header .navbar {
+    width: 100%;
+    height: 100%;
+}
+
+
+body header .navbar .container-fluid{
+    display: flex;
+    justify-content:space-evenly
+}
+
+
+body header .navbar .container-fluid .boton-dm{
+    background-color: grey;
+    color: white;
+    padding: 7px 8px;
+    
+    
+}
+
+
+body header .navbar .container-fluid img{
     width: 200px;
     height: 60px;
 }
 
-header .navbar .container-fluid form .fa-solid{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-    margin-right: 100px;
-    margin-top: 10px;
-    cursor: pointer           
-}
-
-header .navbar .container-fluid form span {
-    
-    font-size: 13px;
-    color: yellowgreen;   
-    padding-left: 5px;          
-}
 
 
-main {
-    padding: 20px;
-}
-
-.articulos {
-    display: flex;    
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.articulos .articulo {
-    width: 250px;
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    text-align: center;    
-}
-
-.articulos .articulo img {
-    width: 100%;    
-}
-
-.articulos .articulo h2{
-    font-size: 20px;
-}
-
-.articulos .articulo p{
-    font-weight: bold;
-}
-
-
-
-.articulos .articulo input {
-    text-align: center;
-    width: 30px;    
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-
-.articulos .articulo .button {    
-    background-color: #4CAF50;
-    color: white;
-    font-size: 13px;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
-.articulos .articulo button:hover {
-    background-color: #45a049;
-}
-
-
-
-header .navbar .lista-carrito {    
+body header .navbar .lista-carrito {    
     position: fixed;
     top: 50px;
     right: 50px;
@@ -103,26 +49,238 @@ header .navbar .lista-carrito {
     overflow-y: auto;
 }
 
+
+
 header .navbar .lista-carrito ul .submenu {
     list-style: none;
 }
 
 
+
 header .navbar .lista-carrito ul .submenu div .tabla thead tr th{
     width: 250px;   
     text-align: center; 
+    padding-top: 40px;
     
 }
+
+header .navbar .lista-carrito ul .submenu div .tabla thead tr .precio-art{
+    padding-top: 75px;
+    
+}
+
 
 header .navbar .lista-carrito ul .submenu div .tabla tbody {
     text-align: center;
 }
 
-header .navbar .lista-carrito ul .submenu div .btn{
-   display: flex;
-   justify-content: center;
-   margin-top: 50px;
+header .navbar .lista-carrito ul .submenu div {
+    display: flex;    
+    flex-direction: column;
+    text-align: center;
+    align-items: center;          
 }
 
+
+header .navbar .lista-carrito ul .submenu div .btn{
+    margin-bottom: 10px;
+    width: 150px;
+    font-size: 15px;
+    
+}
+
+#vaciar-carrito{
+   display: flex;
+   justify-content: center;
+   margin-top: 30px;
+   width: 200px;   
+   font-weight: bold;  
+   font-size: 15px;
+}
+
+   
+
+main .articulos {
+    display: flex;    
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .articulos .articulo {
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: center;    
+}
+
+
+
+main .articulos .articulo img {
+    width: 100%;    
+}
+
+main .articulos .articulo h2{
+    font-size: 20px;
+}
+
+main .articulos .articulo p{
+    font-weight: bold;
+}
+
+
+
+main .articulos .articulo input {
+    text-align: center;
+    width: 30px;    
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+main .articulos .articulo .button {    
+    background-color: #4CAF50;
+    color: white;
+    font-size: 13px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+
+
+
+main .articulos .articulo button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/*--------------------------DARK-MODE------------------------------*/
+
+.dark-mode{
+    background-color: black;
+    color: white;        
+}
+
+.dark-mode header .navbar .lista-carrito {
+    background-color: black;
+    color: white;
+    
+}
+
+
+.dark-mode header .navbar .lista-carrito ul .submenu div .tabla thead tr th{        
+    color: white;
+    
+}
+
+
+/*--------------------------MEDIA QUERIES------------------------------*/
+
+@media screen and (max-width: 620px){
+
+    body header .navbar .container-fluid .boton-dm{
+        font-size: 13px;
+        padding: 7px 8px;
+    }
+
+    header .navbar .lista-carrito ul .submenu div .btn{
+        width: 60px;
+        font-size: 13px;
+    }
+
+          
+
+    header .navbar .container-fluid .dropdown .btn i{        
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    
+    header .navbar .lista-carrito ul .submenu div td{
+        font-size: 13px;
+    }
+
+    #vaciar-carrito{
+        width: 150px;   
+        font-size: 13px;
+        margin-top: 15px;
+    }
+}
+
+
+
+ @media screen and (max-width: 500px){
+
+
+
+    body header .navbar .container-fluid img{
+        width: 160px;
+        height: 48px;
+    }
+
+    body header .navbar .container-fluid .boton-dm{
+        font-size: 12px;
+        padding: 5px 6px;
+    }
+
+    body header .navbar .container-fluid .dropdown .btn .fa-solid{
+        font-size: 12px;
+    }
+
+
+
+    header .navbar .lista-carrito ul .submenu div .tabla tbody tr td img{
+        width: 80px;
+    }
+
+
+    header .navbar .lista-carrito ul .submenu div .btn{
+        width: 50px;
+        font-size: 10px;
+    }
+
+    #vaciar-carrito{
+        width: 100px;   
+        font-size: 11px;
+        margin-top: 15px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 450px){
+    header .navbar .lista-carrito ul .submenu div .btn{
+        width: 50px;
+        
+    }
+
+    header .navbar .lista-carrito ul .submenu div .tabla thead tr th{
+        font-size: 13px;
+    }
+
+    header .navbar .lista-carrito ul .submenu div .tabla tbody tr td img{
+        width: 60px;
+    }
+
+    header .navbar .lista-carrito ul .submenu div td{
+        font-size: 12px;
+    }
+
+    #vaciar-carrito{
+        width: 100px;   
+        font-size: 11px;
+        margin-top: 15px;
+    }
+} 
+        
 
 
