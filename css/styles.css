@@ -25,9 +25,11 @@ body header .navbar .container-fluid .boton-dm{
     background-color: grey;
     color: white;
     padding: 7px 8px;
-    font-style: italic;
-    
-    
+    font-style: italic;       
+}
+
+body header .navbar .container-fluid .boton-dm:hover{
+    background-color: rgb(80, 73, 73);
 }
 
 
@@ -155,8 +157,8 @@ main .articulos .articulo .button {
 
 
 
-main .articulos .articulo button:hover {
-    background-color: #45a049;
+main .articulos .articulo .button:hover {
+    background-color: #2a6d2e;
 }
 
 
@@ -218,12 +220,6 @@ footer .container-fluid .row div h5{
 footer .container-fluid .row div form .form-group{
     padding-top: 10px;
 }
-
-
-
-
-
-
 
 
 
@@ -326,8 +322,7 @@ footer .container-fluid .row div form .form-group{
 
     header .navbar .container-fluid .dropdown .btn i{        
         display: flex;
-        flex-direction: row;
-        
+        flex-direction: row;        
     }
 
     

@@ -29,8 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const productId = event.target.getAttribute("data-id");
             const productName = event.target.parentElement.querySelector("h2").textContent;
             const productImage = event.target.parentElement.querySelector("img").src;
-            const priceText = event.target.parentElement.querySelector(".precio").textContent;
-            const productPrice = parseFloat(priceText.match(/[\d.]+/g).join(''));
+            const productPrice  = event.target.parentElement.querySelector(".precio").getAttribute("precioProd");  
+            //const priceText = event.target.parentElement.querySelector(".precio").textContent;
+            //const productPrice = parseFloat(priceText.match(/[\d.]+/g).join(''));
             const productQuantity = parseInt(event.target.parentElement.querySelector(".cantidad-producto").value);
 
             if (isNaN(productPrice) || isNaN(productQuantity) || productQuantity <= 0) {
@@ -62,6 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
             this.cart.forEach(item => {
                 const cartItem = document.createElement("li");
                 cartItem.className = "submenu";
+                
+                let precio=parseInt(item.price);
+                
                 cartItem.innerHTML = `
                     <div id="carrito">                            
                         <table id="lista-carrito" class="tabla">
@@ -78,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <tr>
                                     <td><img src="${item.image}" width="100" /></td>
                                     <td>${item.name}</td>
-                                    <td>$${item.price}</td>
+                                    <td>$${precio.toLocaleString()}</td>  
                                     <td>${item.quantity}</td>
                                     <td><a href="#" class="btn btn-danger btn-sm remove-item" data-id="${item.id}">Eliminar</a></td>                                
                                 </tr>
@@ -94,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             const totalPriceElement = document.createElement("p");
-            totalPriceElement.innerHTML = `Total: $${total}`;
+            totalPriceElement.innerHTML = `Total: $${total.toLocaleString()}`;
             totalPriceElement.style.cssText = "font-size: 18px; font-weight: bolder; text-align: center; margin-top: 40px";
             cartItems.appendChild(totalPriceElement);
 
@@ -116,9 +120,24 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         vaciarCarrito: function () {
-            this.cart = [];            
-            this.updateCart();
-            this.saveCart();
+           
+            Swal.fire({
+                title: 'Está seguro de vaciar el carrito?',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Sí',
+                denyButtonText: `No`,
+              }).then((result) => {
+                
+                if (result.isConfirmed) {
+                    this.cart = [];            
+                    this.updateCart();
+                    this.saveCart();
+                  Swal.fire('Carrito Vacío!', '', 'success')
+                } else if (result.isDenied) {
+                  Swal.fire('No se aplicaron los cambios', '', 'info')
+                }
+              })
         },
 
         saveCart: function () {
@@ -152,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="info-articulo">
                     <img class"imagenURL" src="img/${product.imagenURL}" alt="${product.nombre}">
                     <h2>${product.nombre}</h2>
-                    <p class="precio">$${product.precio}</p>
+                    <p class="precio" precioProd='${product.precio}'>$${product.precio.toLocaleString()}</p>
                     <label for="cantidadProducto${product.id}">Cantidad:</label>
                     <input class="cantidad-producto" type="number" value="1" min="1"><br>
                     <a href="#" class="u-full-width button input agregar-carrito" data-id="${product.id}">Agregar Al Carrito</a>
